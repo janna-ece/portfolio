@@ -1,0 +1,266 @@
+ /* ========== GLOBAL STYLES ========== */
+:root {
+  --bg-color:black;
+  --sidebar-color:black;
+  --card-color:skyblue;
+  --text-color: white;
+  --accent-color:skyblue;
+  --muted-color:grey;
+  --border-radius: 12px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: black;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  line-height: 1.6;
+}
+main {
+  display: flex;
+  width: 100%;
+  max-width: 1200px;
+  padding: 20px;
+  gap: 20px;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 280px;
+  background: black;
+  border-radius: 12px
+  padding  20px;
+  flex-shrink: 0;
+  position: sticky;
+  top: 20px;
+  height: fit-content;
+}
+
+.sidebar-info {
+  text-align: center;
+}
+
+.avatar-box img {
+  border-radius: 50%;
+  border: 3px solid skyblue;
+}
+
+.name {
+  margin-top: 10px;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.title {
+  font-size: 0.9rem;
+  color:grey;
+}
+
+.info_more-btn {
+  margin-top: 10px;
+  background: none;
+  border: none;
+  color: skyblue;
+  cursor: pointer;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.contacts-list {
+  list-style: none;
+  margin: 20px 0;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.icon-box {
+  width: 30px;
+  height: 30px;
+  background: skyblue;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
+}
+
+.contact-title {
+  font-size: 0.8rem;
+  color: grey;
+}
+
+.contact-link, address, time {
+  font-size: 0.9rem;
+  color: white;
+}
+
+/* Social links */
+.social-list {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  list-style: none;
+}
+
+.social-link {
+  font-size: 1.2rem;
+  color:grey;
+  transition: 0.3s;
+}
+
+.social-link:hover {
+  color:skyblue;
+}
+.main-content {
+  flex: 1;
+  background:black;
+  border-radius: 12px;
+  padding: 20px;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.navbar-list {
+  display: flex;
+  gap: 15px;
+  list-style: none;
+}
+
+.navbar-link {
+  background: none;
+  border: none;
+  color: grey;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.navbar-link.active,
+.navbar-link:hover {
+  color: skyblue;
+  font-weight: 500;
+}
+
+/* Articles */
+.article-title {
+  font-size: 1.4rem;
+  margin-bottom: 15px;
+  color: skyblue;
+}
+
+.about-text p {
+  margin-bottom: 10px;
+  font-size: 0.95rem;
+}
+
+/* Skill*/
+.skill-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  list-style: none;
+}
+
+.skill-item {
+  background: skyblue;
+  border: radius 12px;
+  padding: 15px;
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  transition: 0.3s;
+}
+.skill-content-box{
+    color: black;
+}
+
+.skill-item:hover {
+  transform: translateY(-5px);
+}
+
+.skill-item-title {
+  font-size: 1rem;
+  margin-bottom: 5px;
+}
+
+
+.title-wrapper {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.input-wrapper {
+  display: flex;
+  gap: 10px;
+}
+
+.form-input {
+  flex: 1;
+  padding: 10px;
+  border-radius: 6px;
+  border: none;
+  background: #333;
+  color: white;
+}
+
+.form-btn {
+  background:skyblue;
+  color:white;
+  border: none;
+  padding: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.form-btn:disabled {
+  background:skyblue;
+  color: black;
+  cursor: not-allowed;
+}
+
+.form-btn:hover:not(:disabled) {
+  background:white;
+}
+
+@media (max-width: 900px) {
+  main {
+    flex-direction: column;
+  }
+  .sidebar {
+    width: 100%;
+    position: relative;
+  }
+}
